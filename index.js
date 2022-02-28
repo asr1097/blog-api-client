@@ -1,5 +1,6 @@
-fetch("https://sheltered-anchorage-95159.herokuapp.com/api").then(posts_raw => {
-    posts_raw.json().then(posts => {
+fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
+    .then(posts_raw => posts_raw.json())
+    .then(posts => {
         let list = document.getElementById("list");
         
         posts.forEach(post => {
@@ -8,4 +9,3 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api").then(posts_raw => {
             list.appendChild(list_item);
         })
     })
-})

@@ -15,7 +15,7 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
             list_item.appendChild(title);
             list_item.appendChild(text);
             list_item.appendChild(date);
-            data.posts.comments.forEach(comment => {
+            post.comments.forEach(comment => {
                 let singleComment = document.createElement("li");
                 let title = document.createElement("h5");
                 let text = document.createElement("p");

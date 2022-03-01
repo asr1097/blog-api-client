@@ -13,6 +13,7 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
             let titleInput = document.createElement("input");
             let textInput = document.createElement("textarea");
             let userInput = document.createElement("input");
+            let idInput = document.createElement("input");
             let submitInput = document.createElement("input");
             commentForm.action = "https://sheltered-anchorage-95159.herokuapp.com/api";
             commentForm.method = "post";
@@ -21,6 +22,9 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
             textInput.name = "text";
             userInput.type = "text";
             userInput.name = "user";
+            idInput.hidden = true;
+            idInput.name = "_id";
+            idInput.value = post._id;
             submitInput.type = "submit";
             title.textContent = post.title;
             text.textContent = post.text;

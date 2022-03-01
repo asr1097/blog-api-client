@@ -9,6 +9,19 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
             let text = document.createElement("p");
             let date = document.createElement("p");
             let commentList = document.createElement("ul");
+            let commentForm = document.createElement("form");
+            let titleInput = document.createElement("input");
+            let textInput = document.createElement("textarea");
+            let userInput = document.createElement("input");
+            let submitInput = document.createElement("input");
+            commentForm.action = "https://sheltered-anchorage-95159.herokuapp.com/api";
+            commentForm.method = "post";
+            titleInput.name = "title";
+            titleInput.type = "text";
+            textInput.name = "text";
+            userInput.type = "text";
+            userInput.name = "user";
+            submitInput.type = "submit";
             title.textContent = post.title;
             text.textContent = post.text;
             date.textContent = post.timestamp;
@@ -30,7 +43,12 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
                 singleComment.appendChild(user);
                 singleComment.appendChild(date);
                 commentList.appendChild(singleComment);
-            })
+            });
+            commentForm.appendChild(titleInput);
+            commentForm.appendChild(textInput);
+            commentForm.appendChild(userInput);
+            commentForm.appendChild(submitInput);
+            commentList.appendChild(commentForm);
             list_item.appendChild(commentList);
             list.appendChild(list_item);
         });

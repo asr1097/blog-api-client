@@ -56,5 +56,9 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
             commentList.appendChild(commentForm);
             list_item.appendChild(commentList);
             list.appendChild(list_item);
+
+            commentForm.addEventListener("submit", (event) => {
+                location.reload();
+            })
         });
     });

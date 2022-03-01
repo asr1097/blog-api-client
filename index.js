@@ -51,6 +51,7 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
             commentForm.appendChild(titleInput);
             commentForm.appendChild(textInput);
             commentForm.appendChild(userInput);
+            commentForm.appendChild(idInput);
             commentForm.appendChild(submitInput);
             commentList.appendChild(commentForm);
             list_item.appendChild(commentList);

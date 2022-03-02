@@ -3,7 +3,7 @@ fetch("https://sheltered-anchorage-95159.herokuapp.com/api")
     .then(data => {
         let list = document.getElementById("list");
         
-        data.posts.forEach(post => {
+        data.forEach(post => {
             let list_item = document.createElement("li");
             let title = document.createElement("h3");
             let text = document.createElement("p");
